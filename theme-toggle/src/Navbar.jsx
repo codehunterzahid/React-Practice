@@ -9,7 +9,7 @@ export function Navbar() {
       style={{
         padding: "1rem",
         background: theme === "light" ? "#eee" : "#333",
-        color: theme === "light" ? "#333" : "#eee"
+        color: theme === "light" ? "#333" : "#eee",
       }}
     >
       <h2>My App Navbar</h2>
