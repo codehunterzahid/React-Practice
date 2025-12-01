@@ -3,6 +3,7 @@ import { ThemeContext } from "./ThemeContext";
 
 export function Navbar() {
   const { theme } = useContext(ThemeContext);
+  
 
   return (
     <nav
