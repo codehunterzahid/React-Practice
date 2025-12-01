@@ -10,7 +10,7 @@ export function Content() {
         padding: "2rem",
         background: theme === "light" ? "#fff" : "#222",
         color: theme === "light" ? "#000" : "#fff",
-        minHeight: "200px"
+        minHeight: "200px",
       }}
     >
       <p>This is the content area.</p>
