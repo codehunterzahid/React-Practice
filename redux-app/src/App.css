@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Page background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2; /* light grey masculine tone */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main card */
+.container {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
   text-align: center;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  border: 1px solid #e2e2e2;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Headings */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #2f2f2f; /* strong masculine charcoal */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h3 {
+  margin-top: 0;
+  font-weight: 500;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Counter wrapper */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 
-.card {
-  padding: 2em;
+/* Buttons (Burnt Orange) */
+.counter button {
+  background: #cf6b29; /* masculine burnt-orange */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.2s ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.counter button:hover {
+  background: #b65c22;
+  transform: scale(1.1);
+}
+
+.counter button:active {
+  transform: scale(0.92);
+}
+
+/* Input field */
+.counter input {
+  width: 80px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #cfcfcf;
+  background: #fafafa;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
