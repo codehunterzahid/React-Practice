@@ -1,0 +1,66 @@
+.counter-container {
+  max-width: 400px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.counter-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.counter-container h2 {
+  font-size: 40px;
+  margin: 20px 0;
+  color: #222;
+  font-weight: 700;
+}
+
+.counter-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.counter-btns button {
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* Manly, light theme colors */
+.btn-minus {
+  background-color: #e57373; /* light red */
+  color: white;
+}
+
+.btn-plus {
+  background-color: #64b5f6; /* light blue */
+  color: white;
+}
+
+.btn-add {
+  background-color: #81c784; /* light green */
+  color: white;
+}
+
+/* Hover effects */
+.counter-btns button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Active click effect */
+.counter-btns button:active {
+  transform: scale(0.95);
+}
