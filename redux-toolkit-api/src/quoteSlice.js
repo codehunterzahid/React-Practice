@@ -1,43 +1,42 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchQuotes = createAsyncThunk(
-    "quotes/fetchQuotes",
-    
-    async () =>{
+  "quotes/fetchQuotes",
+
+  async () => {
     const response = await fetch("https://dummyjson.com/quotes");
     const data = await response.json();
     return data;
-    }
+  }
 );
-    
-    const quoteSlice = createSlice({
-    name : "quotes",
-    initialState:{
+
+const quoteSlice = createSlice({
+  name: "quotes",
+  initialState: {
     quotes: [],
     loading: false,
-    error: null
-    },
-    
-    reducers: {},
-    
-    extraReducers: (builder) =>{
+    error: null,
+  },
+
+  reducers: {},
+
+  extraReducers: (builder) => {
     builder
-        .addCase(fetchQuotes.pending, (state) =>{
+      .addCase(fetchQuotes.pending, (state) => {
         state.loading = true;
         state.error = null;
-        })
-        
-        .addCase(fetchQuotes.fulfilled, (state, action) =>{
+      })
+
+      .addCase(fetchQuotes.fulfilled, (state, action) => {
         state.loading = false;
         state.quotes = action.payload.quotes;
-        })
-        
-        .addCase(fetchQuotes.rejected, (state, action) =>{
+      })
+
+      .addCase(fetchQuotes.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
-        });
-    
-    },
-    });
-    
+      });
+  },
+});
+
 export default quoteSlice.reducer;
