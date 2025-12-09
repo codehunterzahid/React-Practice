@@ -1,0 +1,51 @@
+/* Container */
+.quotes-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Quote Card */
+.quote-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 25px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.05)
+    );
+}
+
+/* Hover effect */
+.quote-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Quote text */
+.quote-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* Author */
+.quote-author {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    color: #ffd369;
+}
