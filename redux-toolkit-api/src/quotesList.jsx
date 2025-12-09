@@ -17,7 +17,7 @@ function QuotesList() {
     if (error) return <h2>Error: {error}</h2>
 
     return (
-    
+
         <div className="quotes-container">
             {quotes.map((q) => (
                 <div className="quote-card" key={q.id}>
