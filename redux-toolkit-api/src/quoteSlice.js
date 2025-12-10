@@ -18,8 +18,6 @@ const quoteSlice = createSlice({
     error: null,
   },
 
-  reducers: {},
-
   extraReducers: (builder) => {
     builder
       .addCase(fetchQuotes.pending, (state) => {
